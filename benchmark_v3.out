@@ -1,0 +1,55 @@
+==========================================
+          INFO SISTEMA & HARDWARE         
+==========================================
+Cluster Node: r505c02n02
+CPU Info:
+Thread(s) per core:  1
+Core(s) per socket:  24
+Socket(s):           2
+Model name:          Intel(R) Xeon(R) Platinum 8260 CPU @ 2.40GHz
+CPU MHz:             3100.008
+CPU max MHz:         3900,0000
+CPU min MHz:         1000,0000
+RAM Info:
+              total        used        free      shared  buff/cache   available
+Mem:          376Gi       9,2Gi       363Gi       0,0Ki       3,5Gi       364Gi
+Swap:         4,0Gi        71Mi       3,9Gi
+==========================================
+--> Compilazione in corso...
+Compilazione terminata.
+
+==========================================
+          FASE DI VALIDAZIONE             
+==========================================
+Generazione baseline SERIALE (N=1000)...
+Generazione confronto MPI (N=1000, 4 Processi)...
+Checksum Seriale: 500278
+Checksum MPI:     500278
+>>> VALIDAZIONE SUPERATA: I risultati coincidono! <<<
+
+CSV_DATA_HEADER: Tipo,N,Processi,Thread,Tempo(s)
+--> Esecuzione OpenMP Strong Scaling...
+CSV_DATA: OMP_STRONG,4000,1,1,0.028439
+CSV_DATA: OMP_STRONG,4000,1,4,0.028664
+CSV_DATA: OMP_STRONG,4000,1,8,0.028263
+CSV_DATA: OMP_STRONG,4000,1,16,0.028655
+CSV_DATA: OMP_STRONG,4000,1,32,0.028733
+--> Esecuzione MPI Strong Scaling...
+CSV_DATA: MPI_STRONG,4000,1,1,0.132018
+CSV_DATA: MPI_STRONG,4000,2,1,0.066926
+CSV_DATA: MPI_STRONG,4000,4,1,0.034452
+CSV_DATA: MPI_STRONG,4000,8,1,0.017325
+CSV_DATA: MPI_STRONG,4000,16,1,0.009169
+CSV_DATA: MPI_STRONG,4000,32,1,0.005277
+--> Esecuzione MPI Weak Scaling...
+CSV_DATA: MPI_WEAK,2000,1,1,0.034080
+CSV_DATA: MPI_WEAK,4000,4,1,0.033652
+CSV_DATA: MPI_WEAK,8000,16,1,0.033801
+--> Esecuzione Test Ibrido...
+=== START PROGETTO HPC ===
+Matrice: 4000x4000
+Processi MPI: 4
+Thread OpenMP per processo: 8
+Tempo: 0.005052
+Checksum: 8000666
+CSV_DATA: HYBRID_4x8,4000,4,8,0.005052

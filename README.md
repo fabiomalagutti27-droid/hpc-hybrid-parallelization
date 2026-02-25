@@ -292,7 +292,5 @@ This project is submitted as part of academic coursework at the University of Bo
 ## Contact
 
 **Fabio Malagutti**  
-Email: fabio.malagutti2@studio.unibo.it  
-LinkedIn: [Fabio Malagutti](https://linkedin.com/in/fabio-malagutti)
+Email: fabiomalagutti27@gmail.com
 
-For inquiries regarding this work or collaboration opportunities, please contact via institutional email.
